@@ -1,2 +1,85 @@
-/target
-/resources
+# =========================
+# Rust / Cargo
+# =========================
+
+# Build artifacts
+/target/
+
+# Cargo.lock
+# Keep this for binaries / apps (recommended)
+# Ignore it only for libraries
+# Cargo.lock
+
+# Rustfmt backup files
+**/*.rs.bk
+
+# =========================
+# IDE / Editor files
+# =========================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / CLion
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# =========================
+# OS / temp files
+# =========================
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.tmp
+*.temp
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# App-specific
+# =========================
+
+# Local resources / assets not meant for git
+/resources/
+
+# Runtime-generated data
+/data/
+/cache/
+
+# =========================
+# Environment / secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# Coverage / profiling
+# =========================
+
+coverage/
+*.prof
+*.profraw
+*.flamegraph
+
+# =========================
+# Packaging / distribution
+# =========================
+
+dist/
+build/
