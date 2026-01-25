@@ -23,6 +23,23 @@ impl FacetsState {
     }
 }
 
+pub struct PatternsState {
+    pub current_analysis: Option<PatternAnalysis>,
+}
+
+impl PatternsState {
+    pub fn new() -> Self {
+        Self {
+            current_analysis: None,
+        }
+    }
+
+    pub fn analyze_from_facets(&mut self, facets: &FacetAnalysis) {
+        use crate::data::patterns::analyze_patterns;
+        self.current_analysis = Some(analyze_patterns(facets));
+    }
+}
+
 pub struct BiblioAnalyzerApp {
     pub records: Vec<BiblioRecord>,
     pub search_query: String,
@@ -38,6 +55,7 @@ pub struct BiblioAnalyzerApp {
     pub field_schema: Vec<FieldInfo>,
     pub top_level_fields: Vec<String>,
     pub facets_state: FacetsState,
+    pub patterns_state: PatternsState,
 }
 
 impl Default for BiblioAnalyzerApp {
@@ -65,6 +83,7 @@ impl Default for BiblioAnalyzerApp {
             field_schema: Vec::new(),
             top_level_fields: Vec::new(),
             facets_state: FacetsState::new(),
+            patterns_state: PatternsState::new(),
         }
     }
 }

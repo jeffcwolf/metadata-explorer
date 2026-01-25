@@ -1,6 +1,7 @@
 pub mod browse;
 pub mod details;
 pub mod facets;
+pub mod patterns;
 pub mod other_tabs;
 
 use eframe::egui;
@@ -55,6 +56,7 @@ pub fn render_main_ui(app: &mut BiblioAnalyzerApp, ctx: &egui::Context) {
                 ui.selectable_value(&mut app.current_tab, Tab::Browse, "📋 Browse");
                 ui.selectable_value(&mut app.current_tab, Tab::Schema, "🔍 Schema");
                 ui.selectable_value(&mut app.current_tab, Tab::Facets, "📊 Facets");
+                ui.selectable_value(&mut app.current_tab, Tab::Patterns, "🔎 Patterns");
                 ui.selectable_value(&mut app.current_tab, Tab::Statistics, "📈 Statistics");
                 ui.selectable_value(&mut app.current_tab, Tab::Issues,
                     format!("⚠ Issues ({})", app.issues.len()));
@@ -68,6 +70,7 @@ pub fn render_main_ui(app: &mut BiblioAnalyzerApp, ctx: &egui::Context) {
                 Tab::Browse => browse::render_browse_tab(app, ui),
                 Tab::Schema => other_tabs::render_schema_tab(app, ui),
                 Tab::Facets => facets::render_facets_tab(ui, &mut app.facets_state, &app.records, &app.top_level_fields),
+                Tab::Patterns => patterns::render_patterns_tab(ui, &mut app.patterns_state, &app.facets_state),
                 Tab::Statistics => other_tabs::render_statistics_tab(app, ui),
                 Tab::Issues => other_tabs::render_issues_tab(app, ui),
                 Tab::Details => details::render_details_tab(app, ui),
