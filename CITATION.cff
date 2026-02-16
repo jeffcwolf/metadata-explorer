@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "metadata_explorer"
+title: "metadata-explorer"
 type: software
 authors:
   - family-names: "Wolf"
@@ -9,7 +9,7 @@ authors:
 version: "0.4.0"
 license: Apache-2.0
 date-released: "2026-02-16"
-repository-code: "https://codeberg.org/research_coder/metadata_explorer"
+repository-code: "https://codeberg.org/research_coder/metadata-explorer"
 abstract: "A fast, powerful desktop application for exploring and analyzing JSON datasets (including bibliographical records). Built in Rust with a comfortable sepia-themed interface."
 keywords:
   - research-software
