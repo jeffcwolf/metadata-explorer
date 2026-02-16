@@ -1,5 +1,7 @@
 # Metadata Explorer
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18663802.svg)](https://doi.org/10.5281/zenodo.18663802)
+
 A fast, powerful desktop application for exploring and analyzing JSON datasets (including bibliographical records). Built in Rust with a comfortable sepia-themed interface.
 
 ## Overview
