@@ -4,6 +4,7 @@
 
 # Build artifacts
 /target/
+release/
 
 # Cargo.lock
 # Keep this for binaries / apps (recommended)
@@ -83,3 +84,9 @@ coverage/
 
 dist/
 build/
+
+# Security
+*.pem
+*.key
+id_rsa
+
