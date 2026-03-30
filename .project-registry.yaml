@@ -1,0 +1,59 @@
+name: metadata-explorer
+description: "A fast desktop application for exploring and analysing large JSON datasets — including bibliographic records and MongoDB exports — with OpenRefine-style facet analysis, schema discovery, and data quality auditing."
+status: stable
+category: desktop-app
+language: rust
+forge: github
+visibility: public
+tags: [json, data-analysis, bibliographic-data, mongodb, egui]
+notes: "Tested with 430,000 records (1.46GB JSON files). Built with egui. Inspired by OpenRefine's facet analysis approach."
+created: ""
+last_touched: ""
+# ── Website publication (functionsandfolios.com) ──────────────────────────────
+website:
+  publish: true
+  slug: metadata-explorer
+  order: 99
+  category: "Open-Source Tools"
+  audience: "Researchers, librarians, and data engineers exploring bibliographic records and large JSON datasets"
+  platform: [macOS, Windows, Linux]
+  license: MIT
+  internal_url: "/digital-projects/metadata-explorer"
+  video_url: ""
+  download_url: "https://github.com/jeffcwolf/metadata-explorer"
+  screenshots: []
+  doi: "10.5281/zenodo.18663802"
+  description_long: |
+    Metadata Explorer is a fast desktop application for exploring and
+    analysing JSON datasets — bibliographic records, MongoDB exports, API
+    responses, or any JSON array of objects. It automatically adapts to any
+    JSON structure with no configuration required, and has been tested with
+    datasets of 430,000+ records (1.46GB files).
+
+    ## Key Features
+
+    - **Automatic schema discovery** — analyses your data structure on load,
+      detecting all field names, types, and coverage without configuration
+    - **OpenRefine-style facet analysis** — explore any field with frequency
+      distributions and visual bar charts; ideal for finding patterns,
+      outliers, and data quality issues
+    - **Five analysis tabs** — Browse (paginated table), Details (full nested
+      record view), Facets (field distributions), Schema (field types and
+      coverage), Statistics (dataset overview), and Issues (automatic
+      detection of missing fields, duplicates, and invalid data)
+    - **Smart search** — searches all text fields including nested objects
+      and arrays; case-insensitive, instant filtering even on large datasets
+    - **Performance at scale** — loads 430,000 records in 2–5 seconds with
+      fast paginated browsing throughout
+    - **MongoDB-friendly** — handles ObjectId fields, nested documents,
+      arrays of subdocuments, and any BSON-compatible structure
+
+    ## Use Cases
+
+    Bibliographic data analysis, library catalog exploration, MongoDB
+    collection inspection, API response investigation, and data quality
+    auditing for research datasets.
+
+    ## Status
+
+    Stable at v0.4.0. Published with a DOI via Zenodo.
