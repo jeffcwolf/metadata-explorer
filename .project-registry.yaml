@@ -1,9 +1,9 @@
-name: metadata-explorer
+name: Metadata Explorer
 description: "A fast desktop application for exploring and analysing large JSON datasets — including bibliographic records and MongoDB exports — with OpenRefine-style facet analysis, schema discovery, and data quality auditing."
 status: stable
 category: desktop-app
 language: rust
-forge: github
+forge: multiple
 visibility: public
 tags: [json, data-analysis, bibliographic-data, mongodb, egui]
 notes: "Tested with 430,000 records (1.46GB JSON files). Built with egui. Inspired by OpenRefine's facet analysis approach."
@@ -14,17 +14,18 @@ website:
   publish: true
   slug: metadata-explorer
   order: 99
-  category: "Open-Source Tools"
+  category: "Desktop Applications"
   audience: "Researchers, librarians, and data engineers exploring bibliographic records and large JSON datasets"
   platform: [macOS, Windows, Linux]
-  license: MIT
+  license: Apache 2.0
   internal_url: "/digital-projects/metadata-explorer"
   video_url: ""
   download_url: "https://github.com/jeffcwolf/metadata-explorer"
   screenshots: []
   doi: "10.5281/zenodo.18663802"
+  codeberg_url: "https://codeberg.org/research_coder/metadata-explorer"
   description_long: |
-    Metadata Explorer is a fast desktop application for exploring and
+    Metadata Explorer can be used for exploring and
     analysing JSON datasets — bibliographic records, MongoDB exports, API
     responses, or any JSON array of objects. It automatically adapts to any
     JSON structure with no configuration required, and has been tested with
